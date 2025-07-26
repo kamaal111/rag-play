@@ -798,6 +798,20 @@ openai = [
 ]
 
 [[package]]
+name = "langchain-chroma"
+version = "0.2.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "chromadb" },
+    { name = "langchain-core" },
+    { name = "numpy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3d/37/e841c916db260732ffef3d7e51ceca826aeac26b18615984b4e6381cd07c/langchain_chroma-0.2.5.tar.gz", hash = "sha256:b63e9df8c3fbb316313c232214b7bc8b696a505039a6f7adf29b992a74cc4b2e", size = 17202, upload-time = "2025-07-22T19:26:51.546Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3d/f9/705820c4792540383d4cf9c96fc55784fbd972897f5e84e3160001aba51d/langchain_chroma-0.2.5-py3-none-any.whl", hash = "sha256:dcb80330cd8ac9a87695a5ba237a15affeb805751bdb42dee213b12e0d379825", size = 12453, upload-time = "2025-07-22T19:26:50.57Z" },
+]
+
+[[package]]
 name = "langchain-core"
 version = "0.3.72"
 source = { registry = "https://pypi.org/simple" }
@@ -1686,6 +1700,7 @@ source = { editable = "." }
 dependencies = [
     { name = "chromadb" },
     { name = "langchain", extra = ["openai"] },
+    { name = "langchain-chroma" },
     { name = "langchain-core" },
     { name = "langgraph" },
     { name = "polars" },
@@ -1707,6 +1722,7 @@ dev = [
 requires-dist = [
     { name = "chromadb", specifier = ">=1.0.15" },
     { name = "langchain", extras = ["openai"], specifier = ">=0.3.27" },
+    { name = "langchain-chroma", specifier = ">=0.2.5" },
     { name = "langchain-core", specifier = ">=0.3.72" },
     { name = "langgraph", extras = ["openai"], specifier = ">=0.5.4" },
     { name = "polars", specifier = ">=1.31.0" },
