@@ -1,0 +1,30 @@
+[project]
+name = "rag-play"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+packages = ["src/rag"]
+
+[dependency-groups]
+dev = ["mypy>=1.17.0", "pre-commit>=4.2.0", "ruff>=0.12.5"]
+
+[tool.mypy]
+mypy_path = "src"
+packages = ["rag"]
+python_version = "3.13"
+strict = true
+namespace_packages = true
+explicit_package_bases = true
+check_untyped_defs = true
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
