@@ -5,18 +5,15 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "chromadb>=1.0.15",
     "langchain-core>=0.3.72",
     "langchain[openai]>=0.3.27",
     "langgraph[openai]>=0.5.4",
     "polars>=1.31.0",
-    "psycopg[binary]>=3.2.9",
     "pydantic>=2.11.7",
     "pydantic-extra-types>=2.10.5",
     "pydantic-settings>=2.10.1",
-    "pytz>=2025.2",
-    "sqlalchemy>=2.0.41",
-    "sqlalchemy-utils>=0.41.2",
-    "sqlmodel>=0.0.24",
+    "tiktoken>=0.9.0",
 ]
 
 [build-system]
@@ -27,13 +24,7 @@ build-backend = "hatchling.build"
 packages = ["src/rag"]
 
 [dependency-groups]
-dev = [
-    "ipykernel>=6.30.0",
-    "mypy>=1.17.0",
-    "pre-commit>=4.2.0",
-    "ruff>=0.12.5",
-    "types-pytz>=2025.2.0.20250516",
-]
+dev = ["ipykernel>=6.30.0", "mypy>=1.17.0", "pre-commit>=4.2.0", "ruff>=0.12.5"]
 
 [tool.mypy]
 mypy_path = "src"
