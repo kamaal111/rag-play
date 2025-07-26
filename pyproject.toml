@@ -7,14 +7,13 @@ requires-python = ">=3.13"
 dependencies = [
     "chromadb>=1.0.15",
     "langchain-chroma>=0.2.5",
+    "langchain-community>=0.3.27",
     "langchain-core>=0.3.72",
     "langchain[openai]>=0.3.27",
-    "langgraph[openai]>=0.5.4",
+    "lark>=1.2.2",
     "polars>=1.31.0",
     "pydantic>=2.11.7",
-    "pydantic-extra-types>=2.10.5",
     "pydantic-settings>=2.10.1",
-    "tiktoken>=0.9.0",
 ]
 
 [build-system]
