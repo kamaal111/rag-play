@@ -21,3 +21,5 @@ fi
 export PATH="$PATH:/root/.local/bin"
 
 alias exa=eza
+
+export DATABASE_HOST="vector_store"

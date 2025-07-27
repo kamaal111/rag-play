@@ -1,6 +1,8 @@
 set export
 set dotenv-load
 
+REQ := "http"
+
 UV := "uv"
 UVR := UV + " run"
 
@@ -9,6 +11,17 @@ UV_LINK_MODE := "copy"
 # List available commands
 default:
     just --list --unsorted
+
+# Ping vector store
+ping-vector-store:
+    #!/bin/zsh
+
+    if [ -v $DATABASE_HOST ]
+    then
+        {{ REQ }} :8000/api/v2/heartbeat
+    else
+        {{ REQ }} $DATABASE_HOST:8000/api/v2/heartbeat
+    fi
 
 # Lint code
 lint:

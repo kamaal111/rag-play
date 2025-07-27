@@ -1,0 +1,9 @@
+services:
+  vector_store:
+    container_name: rag-play-vector-store
+    restart: always
+    image: chromadb/chroma
+    ports:
+      - 8000:8000
+    volumes:
+      - ./data:/data
