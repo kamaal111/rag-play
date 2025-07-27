@@ -26,17 +26,4 @@ build-backend = "hatchling.build"
 packages = ["src/rag"]
 
 [dependency-groups]
-dev = ["ipykernel>=6.30.0", "mypy>=1.17.0", "pre-commit>=4.2.0", "ruff>=0.12.5"]
-
-[tool.mypy]
-mypy_path = "src"
-packages = ["rag"]
-python_version = "3.13"
-strict = true
-namespace_packages = true
-explicit_package_bases = true
-check_untyped_defs = true
-disallow_untyped_defs = false
-disallow_incomplete_defs = false
-disallow_untyped_calls = true
-disallow_untyped_decorators = true
+dev = ["ipykernel>=6.30.0", "ruff>=0.12.5"]
